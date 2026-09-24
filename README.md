@@ -56,17 +56,18 @@ Credit Card Dataset
  ```
 --------------------------------------------------------------------
 
-## Running with Docker
 
-Make sure Docker Desktop is running.
+## System Architecture
 
-Build the application image:
+![Fraud Detection System Architecture](architecture.png)
+
+--------------------------------------------------------------
+
+## Running the Project with Docker
+
+Building Docker image:
 
 ```bash
 docker build -t fraud-detection-system .
 ```
 -------------------------------------------------------------
-## System Architecture
-
-![Fraud Detection System Architecture](architecture.png)
---------------------------------------------------------------
