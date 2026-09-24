@@ -64,3 +64,9 @@ Build the application image:
 
 ```bash
 docker build -t fraud-detection-system .
+```
+-------------------------------------------------------------
+## System Architecture
+
+![Fraud Detection System Architecture](architecture.png)
+--------------------------------------------------------------
