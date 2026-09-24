@@ -84,18 +84,16 @@ The complete system can be run locally using Docker Compose.
 
 The application includes Kafka-based transaction streaming, real-time anomaly detection, SQLite persistence, a FastAPI backend, and a Streamlit monitoring dashboard.
 
-So if you have all the required dependencies installed on your system you can run it locally for now!
+### Requirements
 
-Just install my requirements.txt and it will install these dependencies:
-pandas
-numpy
-scikit-learn
-joblib
-fastapi
-uvicorn
-pydantic
-kafka-python
-streamlit
-requests
+- Python 3.11+
+- Docker Desktop
+- Git
+- Credit Card Fraud Detection dataset
 
+Python dependencies can be installed with:
+
+```bash
+pip install -r requirements.txt
+```
 Public cloud deployment is planned for a future version.
