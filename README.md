@@ -1,14 +1,8 @@
-#  Real-Time Fraud Detection System
+# Real-Time Fraud Detection System
 
-A real-time transaction fraud detection system built using
-Kafka, Isolation Forest, FastAPI, SQLite and Streamlit.
+A real-time transaction fraud detection system built using Kafka, Isolation Forest, FastAPI, SQLite and Streamlit.
 
-The system receives transaction data through a Kafka stream,
-analyzes transactions using an Isolation Forest anomaly detection
-model, calculates a risk score, stores the results in SQLite and
-visualizes them through a real-time Streamlit dashboard.
-
----------------------------------------------------------------------------
+The system receives transaction data through a Kafka stream, analyzes transactions using an Isolation Forest anomaly detection model, calculates a risk score, stores the results in SQLite and visualizes them through a real-time Streamlit dashboard.
 
 ## Features
 
@@ -23,51 +17,53 @@ visualizes them through a real-time Streamlit dashboard.
 - Automatic dashboard refresh
 - Model evaluation using precision, recall and F1-score
 
-----------------------------------------------------------------
-
-## System Architecture
-
-```text
-Credit Card Dataset
-        │
-        ▼
- Kafka Producer
-        │
-        ▼
- Apache Kafka
-        │
-        ▼
- Kafka Consumer
-        │
-        ▼
- Isolation Forest
-        │
-        ▼
- Risk Scoring
-        │
-        ▼
- SQLite Database
-        │
-        ▼
- FastAPI
-        │
-        ▼
- Streamlit Dashboard
- ```
---------------------------------------------------------------------
-
-
 ## System Architecture
 
 ![Fraud Detection System Architecture](architecture.png)
 
---------------------------------------------------------------
+## Tech Stack
 
-## Running the Project with Docker
+| Component | Technology |
+|---|---|
+| Programming Language | Python |
+| Machine Learning | Scikit-learn |
+| Anomaly Detection | Isolation Forest |
+| Streaming | Apache Kafka |
+| Backend | FastAPI |
+| Database | SQLite |
+| Dashboard | Streamlit |
+| Data Processing | Pandas, NumPy |
+| Containerization | Docker, Docker Compose |
 
-Building Docker image:
+## Project Structure
 
-```bash
-docker build -t fraud-detection-system .
+```text
+FraudDetectionSystem/
+│
+├── api/
+│   └── main.py
+│
+├── database/
+│   └── database.py
+│
+├── generator/
+│   └── transaction_generator.py
+│
+├── model/
+│   ├── train.py
+│   ├── predict.py
+│   ├── evaluate.py
+│   └── fraud_model.pkl
+│
+├── streaming/
+│   ├── producer.py
+│   └── consumer.py
+│
+├── dashboard.py
+├── check_data.py
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── architecture.png
+└── README.md
 ```
--------------------------------------------------------------
