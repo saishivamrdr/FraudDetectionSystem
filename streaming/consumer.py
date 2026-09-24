@@ -2,6 +2,7 @@ from kafka import KafkaConsumer
 import pandas as pd
 import joblib
 import json
+import os
 from pathlib import Path
 
 from database.database import save_transaction
@@ -16,7 +17,7 @@ features = bundle["features"]
 
 consumer = KafkaConsumer(
     "fraud-transactions",
-    bootstrap_servers="localhost:9092",
+    bootstrap_servers=os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092"),
     auto_offset_reset="earliest",
     enable_auto_commit=True,
     group_id="fraud-detector",

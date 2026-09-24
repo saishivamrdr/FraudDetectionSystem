@@ -53,3 +53,14 @@ Credit Card Dataset
         │
         ▼
  Streamlit Dashboard
+ ```
+--------------------------------------------------------------------
+
+## Running with Docker
+
+Make sure Docker Desktop is running.
+
+Build the application image:
+
+```bash
+docker build -t fraud-detection-system .
