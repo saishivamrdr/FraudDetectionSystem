@@ -67,3 +67,35 @@ FraudDetectionSystem/
 ├── architecture.png
 └── README.md
 ```
+
+## Dataset
+
+The project uses the Credit Card Fraud Detection dataset from Kaggle.
+
+The dataset is not included in this repository. Download `creditcard.csv` and place it at:
+
+```text
+data/creditcard.csv
+```
+
+## Demo
+
+The complete system can be run locally using Docker Compose.
+
+The application includes Kafka-based transaction streaming, real-time anomaly detection, SQLite persistence, a FastAPI backend, and a Streamlit monitoring dashboard.
+
+So if you have all the required dependencies installed on your system you can run it locally for now!
+
+Just install my requirements.txt and it will install these dependencies:
+pandas
+numpy
+scikit-learn
+joblib
+fastapi
+uvicorn
+pydantic
+kafka-python
+streamlit
+requests
+
+Public cloud deployment is planned for a future version.
